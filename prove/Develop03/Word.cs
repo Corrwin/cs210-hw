@@ -10,16 +10,16 @@ using System;
     }
 
     public void Hide() {
-        _isHidden = true;
+        _isHidden = true;                       //method to set _isHidden to true
     }
     public void Show(){
-        _isHidden = false;
+        _isHidden = false;                       //method to set _isHidden to false
     }
-    public bool isHidden(){
+    public bool isHidden(){                       //method to show what isHidden is
         return _isHidden;
     }
     public string GetDisplayText(){
-        if (_isHidden == true) {                 //if _isHidden is somehow NULL, this means that it will default to showing that word
+        if (_isHidden == true) {                   //if _isHidden is somehow NULL, this means that it will default to showing that word
             return "____";
         }
         else return _text;
