@@ -1,6 +1,8 @@
 using System;
-/*
-public class Scriptures{
+
+public class Scripture{
     public Reference _reference;
     public List<Word> _words;
-} */
+
+    
+} 
