@@ -11,7 +11,7 @@ public class Journal {
 
         //call for a prompt and store it
         PromptGenerator jgen = new PromptGenerator();
-        string jprompt = (jgen.GetRandomPrompt);
+        string jprompt = jgen.GetRandomPrompt;
 
         //ask for journal content and save as jcontent
         Console.Write(jprompt);
