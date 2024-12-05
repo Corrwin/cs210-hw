@@ -14,4 +14,4 @@ class Program
         WritingAssignment a3 = new WritingAssignment("Clifford Red", "Reading Rainbows", "How to be a Seeing Eye Dog");
         Console.WriteLine(a3.GetWritingInformation());
     }
-}
+} 
