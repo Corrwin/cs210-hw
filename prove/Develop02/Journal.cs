@@ -2,29 +2,30 @@ using System;
 using System.IO; 
 
 public class Journal {
-    List<string> _entries = new List<string>();
+    List<Entry> _entries = new List<Entry>();
 
 
     public void AddEntry(){
         //store date as local var jdate
-        string jdate = DateTime.Today.ToString('MM/dd/yyyy');
+        DateTime theCurrentTime = DateTime.Today;
+        string jdate = theCurrentTime.ToShortDateString();
 
         //call for a prompt and store it
         PromptGenerator jgen = new PromptGenerator();
-        string jprompt = jgen.GetRandomPrompt;
+        string jprompt = jgen.GetRandomPrompt();
 
         //ask for journal content and save as jcontent
         Console.Write(jprompt);
         string jcontent = Console.ReadLine();
 
-        _entries.Add(Entry(jdate, jprompt, jcontent));
+        _entries.Add(new Entry(jdate, jprompt, jcontent));
     }
 
 
                 //this version of AddEntry exists SOLELY to enable load functionality. Othwise, you would get random prompts
     public void AddEntry (string jdate, string jprompt, string jcontent) {
         
-        _entries.Add(Entry(jdate, jprompt, jcontent));
+        _entries.Add(new Entry(jdate, jprompt, jcontent));
     }
 
     public void DisplayAll() {
