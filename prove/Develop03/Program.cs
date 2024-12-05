@@ -38,6 +38,7 @@ class Program
         
         Console.Clear();
 
+        //then, start the loop of print, remove words, wipe, repeat (or quit)
         while (true){
             Console.WriteLine(Memory.GetDisplayText());
             Console.WriteLine("\n Press enter or type 'quit' to finish. \n");
