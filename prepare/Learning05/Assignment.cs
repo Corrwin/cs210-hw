@@ -14,5 +14,9 @@ public class Assignment {
     public string GetSummary(){
         return (_studentName + " " + _topic);
     }
-    
+
+    public string GetStudentName(){
+        return _studentName;
+    }
+
 }
