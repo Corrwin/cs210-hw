@@ -4,7 +4,8 @@ using System.Security.Cryptography;
 class Program
 {
     static void Main(string[] args)
-    {
+    {   /* This was the code used for testing everything before the full program was set up. I did not delete it so it could be re-used if nessisary.
+
         //test reference class and methods: Passed
         Reference r1 = new Reference("1 Nephi", 2, 3, 3);
         Console.WriteLine(r1.GetDisplayText());
@@ -17,11 +18,20 @@ class Program
         Console.WriteLine(w1.isHidden());
         w1.Show();
         Console.WriteLine(w1.GetDisplayText());
+        
 
         //test scripture class and methods
         Scripture s1 = new Scripture(r1, "3 And it came to pass that he was obedient unto the word of the Lord, wherefore he did as the Lord commanded him.");
         Console.WriteLine(s1.IsCompletelyHidden());
         Console.WriteLine(s1.GetDisplayText());
+        s1.HideRandomWords(3);
+        Console.WriteLine(s1.GetDisplayText());
+        s1.HideRandomWords(3);
+        Console.Clear();
+        Console.WriteLine(s1.GetDisplayText());
+        */
+
+        
     }
 
 }
