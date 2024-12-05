@@ -15,3 +15,5 @@ class Program
         Console.WriteLine(a3.GetWritingInformation());
     }
 } 
+
+//List<Word> _tempWords = new List<Word>
