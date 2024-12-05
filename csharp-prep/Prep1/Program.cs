@@ -3,12 +3,12 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.Write("What is your first name? ");
+        Console.Write("What's your first name? ");
         string first = Console.ReadLine();
 
 
 
-        Console.Write("What is your last name? ");
+        Console.Write("What's your last name? ");
         string last = Console.ReadLine();
 
 
