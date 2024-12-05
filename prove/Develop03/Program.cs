@@ -31,7 +31,26 @@ class Program
         Console.WriteLine(s1.GetDisplayText());
         */
 
+
+        //first, build the reference and the scripture,
+        Reference Nephi = new Reference("1 Nephi", 2, 2, 3);
+        Scripture Memory = new Scripture(Nephi, "And it came to pass that the Lord commanded my father, even in a dream, that he should take his family and depart into the wilderness. And it came to pass that he was obedient unto the word of the Lord, wherefore he did as the Lord commanded him.");
         
+        Console.Clear();
+
+        while (true){
+            Console.WriteLine(Memory.GetDisplayText());
+            Console.WriteLine("\n Press enter or type 'quit' to finish. \n");
+            string userInput = Console.ReadLine();
+            if (userInput == "quit"){
+                Environment.Exit(0);
+            }
+            else {
+                Memory.HideRandomWords(3);
+                Console.Clear();
+            }
+        }
+
     }
 
 }

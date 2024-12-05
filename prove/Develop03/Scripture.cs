@@ -35,18 +35,23 @@ public class Scripture{
             scripture = scripture + " " + _words[i].GetDisplayText();   //...call GetDisplayText to get it as a string, then add that string to the others.
             i++;                                                        //I didn't add this at first, took so long to find it lol
         }
-        return scripture;                                               //finally, return the entire string, now a scripture.
+        return _reference.GetDisplayText() + "  " + scripture;                                               //finally, return the entire string, now a scripture.
         
     }
     public void HideRandomWords(int number){
         int i = 0;
+        int killFactor = 0;
         Random rnd = new Random();
         while (i < number) {
+            killFactor++;
             int rng = rnd.Next(0, _words.Count);                      //first, randomly choose an number within range of the length of _words
             if (_words[rng].isHidden() == false)                      //second, IF that Word in _words is NOT hidden...
             {                                                            
                 _words[rng].Hide();                                    //...the hide it, and INCRIMENT the counter by one. 
                 i++;                                                  //(KNOWN PROBLEM - if there are 2 unhidden words, and you tell it to hide 3, it will endlessly loop)
+            }
+            if (killFactor >= 1000){                                   //this enables ending the program when there's too few words left to hide
+                Environment.Exit(0);
             }
             
         }
