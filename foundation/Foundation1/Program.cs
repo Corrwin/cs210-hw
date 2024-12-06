@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Foundation1 World!");
+        Comment c1 = new Comment("testman123", "this video suckz");
+        Console.WriteLine(c1.DisplayComment());
     }
 }
