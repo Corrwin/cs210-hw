@@ -1,10 +1,10 @@
 using System;
 
 public class Product{
-    string _name;
-    int _id;
-    int _ppu;
-    int _quantity;
+    private string _name;
+    private int _id;
+    private int _ppu;
+    private int _quantity;
 
     public Product(string name, int id, int ppu, int quantity){
         _name  = name;
@@ -16,4 +16,13 @@ public class Product{
     public int TotalCost(){
         return _ppu * _quantity;
     }
+
+    public string GetName(){
+        return _name;
+    }
+
+    public int GetID(){
+        return _id;
+    }
+    
 }

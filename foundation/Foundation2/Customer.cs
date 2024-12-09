@@ -13,4 +13,12 @@ public class Customer{
         return _address.InUSA();
     }
 
+    public string FindAddress(){
+        return _address.FullAddress();
+    }
+
+    public string GetName(){
+        return _name;
+    }
+
 }
