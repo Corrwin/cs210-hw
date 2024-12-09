@@ -19,12 +19,15 @@ public class Order{
             _productTotalCost = _productTotalCost +_products[i].TotalCost();
             i++;
         }
+        if (_customer.InUSA() == false){
+            _productTotalCost = _productTotalCost + 35;
+        }
         return _productTotalCost;
     }
 
     public string ShippingLabel(){
-       string shippingLabel = _customer.GetName() + "\n";
-       shippingLabel = ShippingLabel + _customer.FindAddress();
+       string shippingLabel = "\n" + _customer.GetName() + "\n";
+       shippingLabel = shippingLabel + _customer.FindAddress();
         return shippingLabel;
     }
 
