@@ -46,6 +46,49 @@ public class ReflectingActivity : Activity{
         Console.WriteLine(GetRandomQuestion());
     }
 
-    
+    public void Run(){
+        Console.WriteLine("Let's do a " + _name +" activity!");
+        Console.WriteLine(_description);
+        Console.WriteLine("How long would you like to do the activity for?");
+        _duration = int.Parse(Console.ReadLine());
+        Console.WriteLine("Prepare yourself...");
+        Thread.Sleep(3000);
+
+        Console.Clear();
+        int _repeatInt = _duration/5;
+        int _currentCount = 0;
+        while (_currentCount < _repeatInt){
+            DisplayPrompt();             //show question and prompt
+            DisplayQuestion();
+
+            int i = 0;                 
+            while (i < 5){                      //again, this number could be replaced by another int called PauseTime
+                Console.Write("-");
+               Thread.Sleep(250);
+
+                Console.Write("\b"); 
+                Console.Write("/");              //do the animation loop
+                Thread.Sleep(250);
+
+               Console.Write("\b"); 
+                Console.Write("|"); 
+                Thread.Sleep(250);
+
+               Console.Write("\b"); 
+                Console.Write("\\"); 
+                Thread.Sleep(250);
+
+              Console.Write("\b"); 
+                i++;
+            }
+            Console.Clear();
+            _currentCount++;            
+        }
+        Console.WriteLine("Thank you for your participation!"); //this is the standard closing message
+        _totalCount++;
+        Thread.Sleep(2000);
+        Console.WriteLine("You just completed a " + _name + $" activity that was {_duration} seconds long.");
+        Thread.Sleep(2000);
+    }
     
 }

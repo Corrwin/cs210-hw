@@ -17,7 +17,7 @@ public class ListingActivity : Activity{
     }
 
     public void Run(){
-        Console.WriteLine(_name);
+        Console.WriteLine("Let's do a " + _name +" activity!");
         Console.WriteLine(_description);
         Console.WriteLine("How long would you like to do the activity for?");
         _duration = int.Parse(Console.ReadLine());
@@ -50,8 +50,11 @@ public class ListingActivity : Activity{
         }
         Console.WriteLine($"You listed {_count} things!");
         _totalCount++;
-        Thread.Sleep(1000);
-        Console.WriteLine("Thank you for your participation!"); //this is the standard closing message            
+        Thread.Sleep(1000);                                       //common ending
+        Console.WriteLine("Thank you for your participation!");
+        Thread.Sleep(2000);
+        Console.WriteLine("You just completed a " + _name + $" activity that was {_duration} seconds long.");
+        Thread.Sleep(2000);      
 
         
     }
