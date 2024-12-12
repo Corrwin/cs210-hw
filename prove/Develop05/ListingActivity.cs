@@ -49,7 +49,6 @@ public class ListingActivity : Activity{
             currentTime = DateTime.Now;
         }
         Console.WriteLine($"You listed {_count} things!");
-        _totalCount++;
         Thread.Sleep(1000);                                       //common ending
         Console.WriteLine("Thank you for your participation!");
         Thread.Sleep(2000);

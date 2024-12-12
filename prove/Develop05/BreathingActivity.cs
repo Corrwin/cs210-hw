@@ -106,7 +106,6 @@ public class BreathingActivity : Activity{
         }
         Console.Clear();
          Console.WriteLine("Thank you for your participation!"); //this is the standard closing message
-        _totalCount++;
         Thread.Sleep(2000);
         Console.WriteLine("You just completed a " + _name + $" activity that was {_duration} seconds long.");
         Thread.Sleep(2000);
