@@ -51,7 +51,7 @@ public class ListingActivity : Activity{
         Console.WriteLine($"You listed {_count} things!");
         _totalCount++;
         Thread.Sleep(1000);
-        Console.WriteLine("Thank you!"); //this is the standard closing message            
+        Console.WriteLine("Thank you for your participation!"); //this is the standard closing message            
 
         
     }
