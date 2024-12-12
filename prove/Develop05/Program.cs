@@ -25,14 +25,14 @@ class Program
             }
             else if (userInput == "3"){
                 Console.Clear();
-                b1.Run();
+                r1.Run();
                 _totalCount++;
             } 
             else if (userInput == "4"){
                 Console.WriteLine($"You completed a total of {_totalCount} activites this session!");
                 break;
             }
-            Console.WriteLine("Enjoy the rest of your day!");
+            if (_totalCount == 10){Console.WriteLine("You have met your maximum activity alotment. Goodbye!");}
         }
 
     }
