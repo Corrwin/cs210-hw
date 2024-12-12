@@ -64,17 +64,17 @@ public class ReflectingActivity : Activity{
             int i = 0;                 
             while (i < 5){                      //again, this number could be replaced by another int called PauseTime
                 Console.Write("-");
-               Thread.Sleep(250);
+                Thread.Sleep(250);
 
                 Console.Write("\b"); 
                 Console.Write("/");              //do the animation loop
                 Thread.Sleep(250);
 
-               Console.Write("\b"); 
+                Console.Write("\b"); 
                 Console.Write("|"); 
                 Thread.Sleep(250);
 
-               Console.Write("\b"); 
+                Console.Write("\b"); 
                 Console.Write("\\"); 
                 Thread.Sleep(250);
 
