@@ -1,5 +1,6 @@
 using System;
 
+
 public class ListingActivity : Activity{
     int _count;
     public List<string> _prompts = new List<string>();
@@ -16,7 +17,41 @@ public class ListingActivity : Activity{
     }
 
     public void Run(){
+        Console.WriteLine(_name);
+        Console.WriteLine(_description);
+        Console.WriteLine("How long would you like to do the activity for?");
+        _duration = int.Parse(Console.ReadLine());
+        Console.WriteLine("Prepare yourself...");
+        Thread.Sleep(3000);
 
+        Console.Clear();
+                              //note that the 10 here could be easily made into another base var since every activity has a ThinkingTime
+        GetRandomPrompt();
+        Console.WriteLine("5...");
+        Thread.Sleep(1000);
+        Console.WriteLine("4...");
+        Thread.Sleep(1000);
+        Console.WriteLine("3...");
+        Thread.Sleep(1000);
+        Console.WriteLine("2...");
+        Thread.Sleep(1000);
+        Console.WriteLine("1...");
+        Thread.Sleep(1000);
+        Console.WriteLine("begin writing.");
+
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(_duration);
+
+        DateTime currentTime = DateTime.Now;
+        while (currentTime < endTime){
+            Console.ReadLine();
+            _count++;
+            currentTime = DateTime.Now;
+        }
+        Console.WriteLine($"You listed {_count} things!");
+        _totalCount++;            
+
+        
     }
     
     public void GetRandomPrompt(){
