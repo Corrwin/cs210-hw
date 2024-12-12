@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        ListingActivity l1 = new ListingActivity(60);
+        ListingActivity l1 = new ListingActivity();
         int i = 0;
         while (i < l1._prompts.Count())
         {

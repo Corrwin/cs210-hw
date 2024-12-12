@@ -4,10 +4,10 @@ public class ListingActivity : Activity{
     int _count;
     public List<string> _prompts = new List<string>();
 
-    public ListingActivity(int duration){
+    public ListingActivity(){
         _name = "Listing";
         _description = "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.";
-        _duration = duration;
+        _duration = 50;
         _prompts.Add("Who are people that you appreciate?");
         _prompts.Add("What are personal strengths of yours?");
         _prompts.Add("Who are people that you have helped this week?");
@@ -15,7 +15,9 @@ public class ListingActivity : Activity{
         _prompts.Add("Who are some of your personal heroes?");
     }
 
-    //public void Run(){}
+    public void Run(){
+
+    }
     
     public void GetRandomPrompt(){
         Random rnd = new Random();
