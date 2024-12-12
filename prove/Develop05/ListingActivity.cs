@@ -2,8 +2,8 @@ using System;
 
 
 public class ListingActivity : Activity{
-    int _count;
-    public List<string> _prompts = new List<string>();
+    private int _count;
+    private  List<string> _prompts = new List<string>();
 
     public ListingActivity(){
         _name = "Listing";
@@ -49,7 +49,9 @@ public class ListingActivity : Activity{
             currentTime = DateTime.Now;
         }
         Console.WriteLine($"You listed {_count} things!");
-        _totalCount++;            
+        _totalCount++;
+        Thread.Sleep(1000);
+        Console.WriteLine("Thank you!"); //this is the standard closing message            
 
         
     }
