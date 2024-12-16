@@ -36,4 +36,10 @@ public class ChecklistGoal : Goal{
         //ADD CHECK BOX HERE
         return _details;
     }
+
+    public override string GetStringRepresentation()
+    {
+        string _representation = "Name: " + _name + "\nDescription: " + _description + $"\nTimes Completed: {_amountCompleted} \n";
+        return _representation;
+    }
 }

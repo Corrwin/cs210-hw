@@ -15,4 +15,10 @@ public class EternalGoal : Goal{
     {
         throw new NotImplementedException();
     }
+
+    public override string GetStringRepresentation()
+    {
+        string _representation = "Name: " + _name + "\nDescription: " + _description;
+        return _representation;
+    }
 }

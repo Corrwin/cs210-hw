@@ -21,6 +21,7 @@ public class SimpleGoal : Goal{
 
     public override string GetStringRepresentation()
     {
-        throw new NotImplementedException();
+        string _representation = "Name: " + _name + "\nDescription: " + _description;
+        return _representation;
     }
 }
