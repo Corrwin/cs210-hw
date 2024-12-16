@@ -11,9 +11,9 @@ public class EternalGoal : Goal{
         
     }
 
-    public override bool isComplete()
+    public override bool isComplete() 
     {
-        throw new NotImplementedException();
+        return false;
     }
 
     public override string GetStringRepresentation()
