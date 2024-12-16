@@ -7,7 +7,12 @@ public class EternalGoal : Goal{
         _points = points;
     }
 
-    public class RecordEvent(){
+    public override void RecordEvent(){
         
+    }
+
+    public override bool isComplete()
+    {
+        throw new NotImplementedException();
     }
 }

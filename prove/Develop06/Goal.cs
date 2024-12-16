@@ -13,4 +13,11 @@ public abstract class Goal{
 
     public abstract void RecordEvent();
 
+    public abstract bool isComplete();
+
+    public abstract string GetStringRepresentation();
+
+    public string GetDetailsString(){
+        return _description;
+    }
 }

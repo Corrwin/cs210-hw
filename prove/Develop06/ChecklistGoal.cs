@@ -1,4 +1,5 @@
 using System;
+using System.Runtime;
 
 public class ChecklistGoal : Goal{
     int _amountCompleted;
@@ -16,7 +17,18 @@ public class ChecklistGoal : Goal{
     }
 
 
-    public class RecordEvent(){
-        
+    public override void RecordEvent(){
+        _amountCompleted++;
+        Console.WriteLine($"You have completeed this task {_amountCompleted} of of {_target} times.");
     }
+
+    public override bool isComplete()
+    {
+        if (_amountCompleted >= _target){
+            return true;
+        }
+        else {return false;}
+    }
+
+    
 }
