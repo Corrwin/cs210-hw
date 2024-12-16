@@ -18,4 +18,9 @@ public class SimpleGoal : Goal{
     {
         return _isComplete;
     }
+
+    public override string GetStringRepresentation()
+    {
+        throw new NotImplementedException();
+    }
 }

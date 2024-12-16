@@ -17,7 +17,9 @@ public abstract class Goal{
 
     public abstract string GetStringRepresentation();
 
-    public string GetDetailsString(){
-        return _description;
+    public virtual string GetDetailsString(){
+        string _details = "Name: " + _name + "\nDescription: " + _description + "\n";
+        //ADD CHECK BOX HERE
+        return _details;
     }
 }
