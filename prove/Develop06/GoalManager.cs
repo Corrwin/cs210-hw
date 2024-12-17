@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 
 public class GoalManager(){
     List<Goal> _goals = new List<Goal>();
@@ -48,5 +49,29 @@ public class GoalManager(){
             _goals.Add(new ChecklistGoal(_tempName, _tempDesc, _tempPoint, _tempRepeat, _tempBonus));
         }
         else{Console.WriteLine("Error, bad input. Starting over.");}
+    }
+
+    public void RecordEvent(){
+        Console.WriteLine("Which Goal would you like to record?");
+        ListGoalDescriptions();
+        int _userInput = Int32.Parse(Console.ReadLine());
+        _goals[_userInput].RecordEvent();
+        DisplayPlayerInfo();
+    }
+
+    public void SaveGoals(){
+        Console.WriteLine("Please input file name:");
+        string _saveLocation = Console.ReadLine();
+
+        using (StreamWriter outputFile = new StreamWriter(_saveLocation)){
+            foreach (Goal goal in _goals){
+                outputFile.WriteLine(goal.GetStringRepresentation());
+            }
+        }
+    }
+
+
+    public void LoadGoals(){
+        
     }
 }

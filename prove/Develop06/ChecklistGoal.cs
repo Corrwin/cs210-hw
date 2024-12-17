@@ -46,7 +46,7 @@ public class ChecklistGoal : Goal{
 
     public override string GetStringRepresentation()
     {
-        string _representation = "ChecklistGoal\n" + _name + "\n" + _description + $"\n{_points}\n{_target}\n{_bonus}";
+        string _representation = "ChecklistGoal:" + _name + ":" + _description + $":{_points}:{_target}:{_bonus}";
         return _representation;
     }
 }
