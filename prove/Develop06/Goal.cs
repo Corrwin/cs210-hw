@@ -3,7 +3,7 @@ using System;
 public abstract class Goal{
    protected string _name;
    protected string _description;
-   protected int _points;
+   public int _points;
 
     protected  Goal(string name, string description, int points){
         _name = name;
@@ -13,14 +13,21 @@ public abstract class Goal{
 
     public abstract void RecordEvent();
 
-    public abstract bool isComplete();
+    public abstract bool IsComplete();
 
     public abstract string GetStringRepresentation();
 
-    public virtual string GetDetailsString(){
+    public virtual string GetDetailsString(){   //I know this was NOT supposed to be abstract. However, I can't figure out how it is supposed to work without being abstract.
         
         string _details = _name + "(" + _description + ")\n";
-        //ADD CHECK BOX HERE
         return _details;
+    }
+
+    public string GetName(){
+        return _name;
+    }
+
+    public string GetDescription(){
+        return _description;
     }
 }

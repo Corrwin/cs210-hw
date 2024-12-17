@@ -11,7 +11,7 @@ public class EternalGoal : Goal{
         Console.WriteLine($"Congrats! You earned {_points} points!");
     }
 
-    public override bool isComplete() 
+    public override bool IsComplete() 
     {
         return false;
     }

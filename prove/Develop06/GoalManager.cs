@@ -4,19 +4,21 @@ public class GoalManager(){
     List<Goal> _goals = new List<Goal>();
     int _score = 0;
 
-    
+    public void DisplayPlayerInfo(){
+        Console.WriteLine($"You have {_score} points.");
+    }
 
+    public void ListGoalNames(){
+        foreach (Goal goal in _goals){
+            Console.WriteLine(goal.GetName());
+        }
+    }
 
-
-
-
-
-
-
-
-
-
-
+    public void ListGoalDescriptions(){
+        foreach (Goal goal in _goals){
+            Console.WriteLine(goal.GetDescription());
+        }
+    }
 
     public void CreateGoal(){
         Console.WriteLine("What Kind of Goal would you like to make?\n1. Simple Goal\n 2.Eternal Goal\n3.Checklist Goal");

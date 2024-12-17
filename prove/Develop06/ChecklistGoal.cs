@@ -23,7 +23,7 @@ public class ChecklistGoal : Goal{
         Console.WriteLine($"You have completed {_name} {_amountCompleted} of {_target} times.");
     }
 
-    public override bool isComplete()
+    public override bool IsComplete()
     {
         if (_amountCompleted >= _target){
             return true;

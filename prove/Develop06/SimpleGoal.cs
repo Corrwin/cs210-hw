@@ -15,7 +15,7 @@ public class SimpleGoal : Goal{
         _isComplete = true;
     }
 
-    public override bool isComplete()
+    public override bool IsComplete()
     {
         return _isComplete;
     }
