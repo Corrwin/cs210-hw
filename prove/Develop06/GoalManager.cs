@@ -15,7 +15,7 @@ public class GoalManager(){
         if(_userInput == 3){SaveGoals();}
         if(_userInput == 4){LoadGoals();}
         if(_userInput == 5){RecordEvent();}
-        if(_userInput == 6){kill;}
+        if(_userInput == 6){System.Environment.Exit(0);}
 
 
 
