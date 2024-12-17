@@ -18,6 +18,7 @@ public class ChecklistGoal : Goal{
 
 
     public override void RecordEvent(){
+        Console.WriteLine($"Congrats! You earned {_points} points!");
         _amountCompleted++;
         Console.WriteLine($"You have completed {_name} {_amountCompleted} of {_target} times.");
     }
@@ -39,7 +40,7 @@ public class ChecklistGoal : Goal{
 
     public override string GetStringRepresentation()
     {
-        string _representation = "Name: " + _name + "\nDescription: " + _description + $"\nTimes Completed: {_amountCompleted} \n";
+        string _representation = "Name: " + _name + "\nDescription: " + _description + $"\nTimes Completed: {_amountCompleted}/{_target} \n";
         return _representation;
     }
 }
