@@ -19,7 +19,7 @@ public class ChecklistGoal : Goal{
 
     public override void RecordEvent(){
         _amountCompleted++;
-        Console.WriteLine($"You have completeed this task {_amountCompleted} of of {_target} times.");
+        Console.WriteLine($"You have completed {_name} {_amountCompleted} of {_target} times.");
     }
 
     public override bool isComplete()
