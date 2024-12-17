@@ -10,11 +10,11 @@ public class GoalManager(){
         Console.WriteLine("Menu Options:\n1. Create New Goal\n2. List Goals\n3. Save Goals\n4.Load Goals\n5.Record Event\n6. Quit");
         int _userInput = Int32.Parse(Console.ReadLine());
 
-        if (_userInput == 1){CreateGoal();}
-        if(_userInput == 2){ListGoalDescriptions();}
-        if(_userInput == 3){SaveGoals();}
-        if(_userInput == 4){LoadGoals();}
-        if(_userInput == 5){RecordEvent();}
+        if (_userInput == 1){CreateGoal(); Start();}
+        if(_userInput == 2){ListGoalDescriptions(); Start();}
+        if(_userInput == 3){SaveGoals(); Start();}
+        if(_userInput == 4){LoadGoals(); Start();}
+        if(_userInput == 5){RecordEvent(); Start();}
         if(_userInput == 6){System.Environment.Exit(0);}
 
 
@@ -46,7 +46,7 @@ public class GoalManager(){
     }
 
     public void CreateGoal(){
-        Console.WriteLine("What Kind of Goal would you like to make?\n1. Simple Goal\n 2.Eternal Goal\n3.Checklist Goal");
+        Console.WriteLine("What Kind of Goal would you like to make?\n1. Simple Goal\n2.Eternal Goal\n3.Checklist Goal");
         int _userInput = Int32.Parse(Console.ReadLine());
         Console.WriteLine("What is the name of your goal?");
         string _tempName = Console.ReadLine();
@@ -59,11 +59,11 @@ public class GoalManager(){
             _goals.Add(new SimpleGoal(_tempName, _tempDesc, _tempPoint, false));
         }   
 
-        if (_userInput == 2){
+        else if (_userInput == 2){
             _goals.Add(new EternalGoal(_tempName, _tempDesc, _tempPoint));
         }
 
-        if (_userInput == 3){
+        else if (_userInput == 3){
             Console.WriteLine("How many times would you like to repeat this goal?");
             int _tempRepeat =Int32.Parse(Console.ReadLine());
             Console.WriteLine("How many points do you get for completing it that many times?");
@@ -78,6 +78,7 @@ public class GoalManager(){
         ListGoalDescriptions();
         int _userInput = Int32.Parse(Console.ReadLine());
         _goals[_userInput].RecordEvent();
+        _score = _score + _goals[_userInput]._points;
         DisplayPlayerInfo();
     }
 
@@ -104,14 +105,14 @@ public class GoalManager(){
             string[] parts = line.Split(':');
 
             if (parts[0] == "SimpleGoal"){
-                new SimpleGoal(parts[1], parts[2], Int32.Parse(parts[3]), bool.Parse(parts[4]));
+                _goals.Add(new SimpleGoal(parts[1], parts[2], Int32.Parse(parts[3]), bool.Parse(parts[4])));
 
             }
             if (parts[0] == "EternalGoal"){
-                new EternalGoal(parts[1], parts[2], Int32.Parse(parts[3]));
+                _goals.Add(new EternalGoal(parts[1], parts[2], Int32.Parse(parts[3])));
             }
             if (parts[0] == "ChecklistGoal"){
-                new ChecklistGoal(parts[1], parts[2], Int32.Parse(parts[3]), Int32.Parse(parts[4]), Int32.Parse(parts[5]));
+               _goals.Add(new ChecklistGoal(parts[1], parts[2], Int32.Parse(parts[3]), Int32.Parse(parts[4]), Int32.Parse(parts[5])));
             }
         }
     }

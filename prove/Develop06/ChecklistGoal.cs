@@ -35,10 +35,10 @@ public class ChecklistGoal : Goal{
     public override string GetDetailsString(){
         string _details = "";
         if (IsComplete()){
-             _details = "[X]" + _name + "(" + _description + $") - times Completed: {_amountCompleted}/{_target}  \n";
+             _details = "[X]" + _name + "(" + _description + $") - Times Completed: {_amountCompleted}/{_target}  \n";
         }
         else {
-             _details = "[ ]" + _name + "(" + _description + $") - times Completed: {_amountCompleted}/{_target} \n";
+             _details = "[ ]" + _name + "(" + _description + $") - Times Completed: {_amountCompleted}/{_target} \n";
         }
         
         return _details;
