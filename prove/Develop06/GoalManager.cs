@@ -34,7 +34,7 @@ public class GoalManager(){
         int _tempPoint = Int32.Parse(Console.ReadLine());
 
         if (_userInput == 1){
-            _goals.Add(new SimpleGoal(_tempName, _tempDesc, _tempPoint));
+            _goals.Add(new SimpleGoal(_tempName, _tempDesc, _tempPoint, false));
         }   
 
         if (_userInput == 2){
@@ -72,6 +72,25 @@ public class GoalManager(){
 
 
     public void LoadGoals(){
-        
+        Console.WriteLine("Please input file name:");
+        string _loadLocation = Console.ReadLine();
+
+        string[] lines = System.IO.File.ReadAllLines(_loadLocation);
+
+        foreach (string line in lines){
+
+            string[] parts = line.Split(':');
+
+            if (parts[0] == "SimpleGoal"){
+                new SimpleGoal(parts[1], parts[2], Int32.Parse(parts[3]), bool.Parse(parts[4]));
+
+            }
+            if (parts[0] == "EternalGoal"){
+                new EternalGoal(parts[1], parts[2], Int32.Parse(parts[3]));
+            }
+            if (parts[0] == "ChecklistGoal"){
+                new ChecklistGoal(parts[1], parts[2], Int32.Parse(parts[3]), Int32.Parse(parts[4]), Int32.Parse(parts[5]));
+            }
+        }
     }
 }

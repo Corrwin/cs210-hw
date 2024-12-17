@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        SimpleGoal s1 = new SimpleGoal("Test Simple", "Simply a test", 50);
+        SimpleGoal s1 = new SimpleGoal("Test Simple", "Simply a test", 50, false);
         EternalGoal e1 = new EternalGoal("Test Eternal", "Eternally a test", 10);
         ChecklistGoal c1 = new ChecklistGoal("Test Checklist", "Simply a test", 20, 3, 500);
 
