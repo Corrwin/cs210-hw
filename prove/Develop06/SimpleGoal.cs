@@ -22,7 +22,7 @@ public class SimpleGoal : Goal{
 
     public override string GetStringRepresentation()
     {
-        string _representation = _name + "\n" + _description + $"\n{_points}\n" + _isComplete;
+        string _representation = "SimpleGoal\n" + _name + "\n" + _description + $"\n{_points}\n" + _isComplete;
         return _representation;
     }
 }

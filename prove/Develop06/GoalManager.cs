@@ -16,7 +16,7 @@ public class GoalManager(){
 
     public void ListGoalDescriptions(){
         foreach (Goal goal in _goals){
-            Console.WriteLine(goal.GetDescription());
+            Console.WriteLine(goal.GetDetailsString()); 
         }
     }
 

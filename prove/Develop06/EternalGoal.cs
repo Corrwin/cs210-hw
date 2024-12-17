@@ -18,7 +18,7 @@ public class EternalGoal : Goal{
 
     public override string GetStringRepresentation()
     {
-        string _representation = _name + "\n" + _description + $"\n{_points}";
+        string _representation = "EternalGoal\n" + _name + "\n" + _description + $"\n{_points}";
         return _representation;
     }
 }

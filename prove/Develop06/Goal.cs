@@ -32,8 +32,5 @@ public abstract class Goal{
     public string GetName(){
         return _name;
     }
-
-    public string GetDescription(){
-        return _description;
-    }
+    
 }
