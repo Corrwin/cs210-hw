@@ -18,8 +18,14 @@ public abstract class Goal{
     public abstract string GetStringRepresentation();
 
     public virtual string GetDetailsString(){   //I know this was NOT supposed to be abstract. However, I can't figure out how it is supposed to work without being abstract.
-        
-        string _details = _name + "(" + _description + ")\n";
+         string _details = "";
+         if (IsComplete()){
+            _details = "[X]" + _name + "(" + _description + ")\n";
+         }
+         else {
+            _details ="[ ]" + _name + "(" + _description + ")\n";
+         }
+             
         return _details;
     }
 
