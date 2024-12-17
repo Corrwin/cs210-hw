@@ -19,7 +19,7 @@ public abstract class Goal{
 
     public virtual string GetDetailsString(){
         
-        string _details = "Name: " + _name + "\nDescription: " + _description + "\n";
+        string _details = _name + "(" + _description + ")\n";
         //ADD CHECK BOX HERE
         return _details;
     }

@@ -33,14 +33,14 @@ public class ChecklistGoal : Goal{
 
     
     public override string GetDetailsString(){
-        string _details = "Name: " + _name + "\nDescription: " + _description + $"\nTimes Completed: {_amountCompleted} \n";
+        string _details = _name + "(" + _description + $") - times Completed: {_amountCompleted} \n";
         //ADD CHECK BOX HERE
         return _details;
     }
 
     public override string GetStringRepresentation()
     {
-        string _representation = "Name: " + _name + "\nDescription: " + _description + $"\nTimes Completed: {_amountCompleted}/{_target} \n";
+        string _representation = _name + "\n" + _description + $"\n{_points}\n{_target}\n{_bonus}";
         return _representation;
     }
 }
