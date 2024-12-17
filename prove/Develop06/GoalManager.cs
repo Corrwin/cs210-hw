@@ -5,6 +5,28 @@ public class GoalManager(){
     List<Goal> _goals = new List<Goal>();
     int _score = 0;
 
+
+    public void Start(){
+        Console.WriteLine("Menu Options:\n1. Create New Goal\n2. List Goals\n3. Save Goals\n4.Load Goals\n5.Record Event\n6. Quit");
+        int _userInput = Int32.Parse(Console.ReadLine());
+
+        if (_userInput == 1){CreateGoal();}
+        if(_userInput == 2){ListGoalDescriptions();}
+        if(_userInput == 3){SaveGoals();}
+        if(_userInput == 4){LoadGoals();}
+        if(_userInput == 5){RecordEvent();}
+        if(_userInput == 6){kill;}
+
+
+
+
+
+
+
+
+
+
+    }
     public void DisplayPlayerInfo(){
         Console.WriteLine($"You have {_score} points.");
     }
