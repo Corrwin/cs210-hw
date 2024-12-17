@@ -15,8 +15,10 @@ public class GoalManager(){
     }
 
     public void ListGoalDescriptions(){
-        foreach (Goal goal in _goals){
-            Console.WriteLine(goal.GetDetailsString()); 
+        int i = 0;
+        while (i < _goals.Count()){
+            Console.WriteLine($"{i}. " + _goals[i].GetDetailsString()); 
+            i++;
         }
     }
 
