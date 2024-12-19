@@ -22,7 +22,7 @@ public class RunActivity : Activity{
 
     public override string GetSummary()
     {
-        string _summary = _today.ToString() + $" Running ({_time} min) - Distance {GetDistance()} miles, speed {GetSpeed()} mph, pace {GetPace()} min per mile";
+        string _summary = _today.ToLongDateString() + $" Running ({_time} min) - Distance {GetDistance()} miles, speed {GetSpeed()} mph, pace {GetPace()} min per mile";
         return _summary;
 
     }
