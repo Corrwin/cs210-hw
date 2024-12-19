@@ -3,7 +3,8 @@ using System;
 class Program
 {
     static void Main(string[] args)
-    {
-        Console.WriteLine("Hello Foundation3 World!");
+    { 
+        RunActivity r1 = new RunActivity(30, 5);
+        Console.WriteLine(r1.GetSummary());
     }
 }
